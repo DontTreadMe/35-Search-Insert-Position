@@ -8,7 +8,7 @@ var searchInsert = function(nums, target) {
   if (target > nums[nums.length - 1]) return nums.length;
   if (target === nums[nums.length - 1]) return nums.length - 1;
   const subSearch = (nums, target, i, j) => {
-    let mid = Math.floor((j - i) / 2);
+    let mid = Math.floor((j + i) / 2);
 //     console.log(mid);
     return target > nums[mid] && target <= nums[mid + 1] ? mid + 1 : 
     target > nums[mid] ? subSearch(nums, target, mid, j) : 
