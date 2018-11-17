@@ -12,7 +12,6 @@ var searchInsert = function(nums, target) {
 //     console.log(mid);
     return target > nums[mid] && target <= nums[mid + 1] ? mid + 1 : 
     target > nums[mid] ? subSearch(nums, target, mid, j) : 
-    target === nums[mid] ? mid : 
     subSearch(nums, target, i, mid);
   }
   return subSearch(nums, target, 0, nums.length - 1);
